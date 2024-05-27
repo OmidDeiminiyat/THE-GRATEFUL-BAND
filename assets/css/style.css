@@ -1,0 +1,150 @@
+body {
+  background-color: #5C4228;
+}
+
+.main-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-head img {
+  width: 3vw;
+}
+.main-head ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  background-color: #5C4228;
+}
+.main-head ul li {
+  padding: 10px 15px 10px 15px;
+  color: #CAC3BC;
+}
+.main-head ul li:nth-child(1) {
+  color: black;
+  background-color: #FECFA7;
+  border-radius: 15px;
+}
+
+.mainImages figure {
+  margin: 0;
+  padding: 0;
+}
+.mainImages figure .img1, .mainImages figure .img2, .mainImages figure .img3, .mainImages figure .img4, .mainImages figure .img5 {
+  border: 1px solid rgba(215, 168, 122, 0.6941176471);
+  width: 100%;
+  height: 600px;
+  border-radius: 30px;
+}
+.mainImages figure .img1 {
+  background-image: url("../images/pexels-brett-sayles-1309240.jpg");
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+}
+.mainImages figure .img2 {
+  background-image: url("../images/pexels-jc-siller-8634867.jpg");
+  background-size: cover;
+  display: none;
+}
+.mainImages figure .img3 {
+  background-image: url("../images/pexels-josh-sorenson-995301.jpg");
+  background-size: cover;
+  display: none;
+}
+.mainImages figure .img4 {
+  background-image: url("../images/pexels-oleg-magni-1813124.jpg");
+  background-size: cover;
+  display: none;
+}
+.mainImages figure .img5 {
+  background-image: url("../images/pexels-vishnu-r-nair-1105666.jpg");
+  background-size: cover;
+  display: none;
+}
+.mainImages figure .carousel-image {
+  display: none;
+}
+.mainImages figure .active {
+  display: block;
+  animation-name: changed;
+  animation-duration: 2s;
+}
+@keyframes changed {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mainImages figure img {
+  width: 100%;
+  height: 600px;
+}
+.mainImages .circles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+.mainImages .circles .material-symbols-outlined {
+  color: #FECFA7;
+}
+.mainImages .circles .circle {
+  cursor: pointer;
+}
+.mainImages .circles .circle.active {
+  color: red;
+}
+
+.staff {
+  background-color: #483726;
+}
+.staff h2 {
+  color: rgba(210, 166, 127, 0.6901960784);
+  text-align: center;
+}
+.staff .staffList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.staff .staffList figure {
+  border: 1px solid rgba(215, 168, 122, 0.6941176471);
+  border-radius: 30px;
+  text-align: center;
+  background-color: #483726;
+}
+.staff .staffList figure p {
+  color: #CAC3BC;
+}
+.staff .staffList figure button {
+  padding: 6px 6px 8px 6px;
+  margin: 0 0 6px 0;
+}
+.staff .staffList .img, .staff .staffList .img1, .staff .staffList .img2, .staff .staffList .img3 {
+  width: 100%;
+  height: 200px;
+  border: 1px solid rgba(215, 168, 122, 0.6941176471);
+  border-radius: 0 60px 0 60px;
+  transition: 1s;
+}
+.staff .staffList .img {
+  background-image: url("../images/Second.png");
+  background-size: cover;
+}
+.staff .staffList .img1 {
+  background-image: url("../images/First.png");
+  background-size: cover;
+}
+.staff .staffList .img2 {
+  background-image: url("../images/pexels-wendy-wei-1699161.jpg");
+  background-size: cover;
+}
+.staff .staffList .img3 {
+  background-image: url("../images/Second.png");
+  background-size: cover;
+}
+.staff .staffList .img:hover {
+  box-shadow: 0px 2px 26px 0px rgba(169, 134, 42, 0.75);
+}
