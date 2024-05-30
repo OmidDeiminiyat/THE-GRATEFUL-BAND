@@ -1,0 +1,91 @@
+@import "../helper/variable";
+@import "../helper/mixin";
+@import "../helper/animation";
+
+
+@media (max-width: 600px) {
+
+    .main-head {
+        display: none;
+        background-color: red;
+    }
+
+    #mobileClosed {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      figure{
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+
+        img{
+            width: 30%;
+            margin-left: 50%;
+        }
+        .material-symbols-outlined {
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+        }
+
+    
+    }
+
+    #mobileOpened {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        top: 10px;
+        z-index: 1;
+        
+        @include animation(fadeIn, 1s, ease-in-out);
+
+        #icoTwo {
+            @include animation(slideIn, 1s, ease-in-out);
+        }
+        section{
+            background-color: $headerBox;
+            color: white;
+            box-shadow: -2px 2px 14px 0px rgba(230,219,219,0.75);
+            top: 0;
+
+            ul {
+                li{
+                    list-style: none;
+                    padding: 6px 6px 6px 0;
+                    cursor: pointer;
+                    &:hover {
+                        color: $hover;
+                    }
+                }
+            }
+        }
+    }
+// Mobile style for staff section
+
+.staff {
+
+    .staffList {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+    }
+    figure{
+        height: 500px;
+    }
+}
+
+// Mobile design for footer
+
+    footer {
+        color: $paragraf;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        margin: 30px 0 0 0;
+    }
+
+}

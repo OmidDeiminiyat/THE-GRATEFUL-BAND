@@ -1,31 +1,3 @@
-body {
-  background-color: #5C4228;
-}
-
-.main-head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.main-head img {
-  width: 3vw;
-}
-.main-head ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  background-color: #5C4228;
-}
-.main-head ul li {
-  padding: 10px 15px 10px 15px;
-  color: #CAC3BC;
-}
-.main-head ul li:nth-child(1) {
-  color: black;
-  background-color: #FECFA7;
-  border-radius: 15px;
-}
-
 .mainImages figure {
   margin: 0;
   padding: 0;
@@ -95,6 +67,50 @@ body {
 }
 .mainImages .circles .circle.active {
   color: red;
+}
+
+.main-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-head figure {
+  margin: 0 0 0 30px;
+}
+.main-head img {
+  width: 5vw;
+}
+.main-head ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  background-color: rgba(67, 49, 31, 0.7843137255);
+  padding: 0;
+  border-radius: 30px;
+}
+.main-head ul li {
+  padding: 10px 15px 1px 15px;
+  color: #CAC3BC;
+}
+.main-head ul li:nth-child(1) {
+  color: rgb(249, 245, 245);
+  background-color: rgba(42, 32, 22, 0.7843137255);
+  border-radius: 15px;
+  padding: 10px 15px 1px 15px;
+}
+.main-head .thirdHead {
+  margin: 20px 30px 0 0;
+}
+.main-head .thirdHead .button {
+  padding: 9px 21px 9px 21px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FECFA7;
+  cursor: pointer;
+}
+
+#mobileClosed, #mobileOpened, #icoTwo {
+  display: none;
 }
 
 .staff {
@@ -181,9 +197,21 @@ footer .newslatter form input[type=email] {
   border: none;
   height: 20px;
   width: 70%;
+  color: #CAC3BC;
 }
 footer .newslatter form .lable {
   font-size: 13px;
+}
+footer .newslatter form #emailError {
+  display: none;
+  color: red;
+}
+footer .newslatter form .error {
+  color: red;
+  display: none;
+}
+footer .newslatter #thankYou {
+  display: none;
 }
 
 .right {
@@ -192,4 +220,128 @@ footer .newslatter form .lable {
   background-color: #5C4228;
   text-align: center;
   color: rgba(210, 166, 127, 0.6901960784);
+}
+
+#worldTiur {
+  width: 70%;
+  margin-left: 15%;
+}
+#worldTiur h2 {
+  color: rgba(210, 166, 127, 0.6901960784);
+}
+
+.tour {
+  display: grid;
+  grid: 1fr;
+}
+.tour h5 {
+  color: #CAC3BC;
+  font-size: 21px;
+  margin: 10px 0 0 0;
+}
+.tour figure {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #23201D;
+}
+.tour .tourImg {
+  background-image: url("../images/pexels-vishnu-r-nair-1105666.jpg");
+  background-size: cover;
+  border-radius: 0 40% 40% 0;
+  width: 30%;
+}
+
+@keyframes fadeIn {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -300px;
+  }
+}
+@media (max-width: 600px) {
+  .main-head {
+    display: none;
+    background-color: red;
+  }
+  #mobileClosed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #mobileClosed figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  #mobileClosed img {
+    width: 30%;
+    margin-left: 50%;
+  }
+  #mobileClosed .material-symbols-outlined {
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+  }
+  #mobileOpened {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+  #mobileOpened #icoTwo {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+  #mobileOpened section {
+    background-color: rgba(67, 49, 31, 0.7843137255);
+    color: white;
+    box-shadow: -2px 2px 14px 0px rgba(230, 219, 219, 0.75);
+    top: 0;
+  }
+  #mobileOpened section ul li {
+    list-style: none;
+    padding: 6px 6px 6px 0;
+    cursor: pointer;
+  }
+  #mobileOpened section ul li:hover {
+    color: rgba(216, 119, 63, 0.6941176471);
+  }
+  .staff .staffList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .staff figure {
+    height: 500px;
+  }
+  footer {
+    color: #CAC3BC;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin: 30px 0 0 0;
+  }
+}
+body {
+  background-color: #5C4228;
 }

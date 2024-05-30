@@ -6,14 +6,14 @@
     <title>THE GRATEFUL BAND</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
-   
 </head>
 <body>
    <header class="main-head">
-    <figure>
-        <img src="./assets/images/THE-GRATEFUL-BAND.png" alt="">
-    </figure>
 
+ <figure>
+       
+        <img src="./assets/images/THE-GRATEFUL-BAND.png" alt="">
+    </figure> 
     <ul>
         <li>Home</li>
         <li>Fan club</li>
@@ -21,25 +21,65 @@
         <li>Contact us</li>
         <li>Join now</li>
     </ul>
+    <div class="thirdHead">
+        <button class="button">Join fan club</button>
+    </div>
    </header>
-   <main class="main">
-    <section class="mainImages">
-        <figure>
-            <div class="carousel-image img1 active" ></div>
-            <div class="carousel-image img2" ></div>
-            <div class="carousel-image img3"></div>
-            <div class="carousel-image img4"></div>
-            <div class="carousel-image img5"></div>
-        </figure>
+   <!-- Mobile version for header -->
+   <header id="mobileClosed" class="mobileClosed">
+    <div></div>
+    <figure>
+        <img src="./assets/images/THE-GRATEFUL-BAND.png" alt="">
+    </figure>
+    <span id="ico" onclick="openBar()" class="material-symbols-outlined">
+        menu
+    </span>
+    <span id="icoTwo" onclick="closeBar()" class="material-symbols-outlined mete">
+        menu_open
+    </span>
+   
+   </header>
+   <header id="mobileOpened" class="mobileOpened">
+    <section>
+        <ul class="mobileMenuIn">
+            <li>Home</li>
+            <li>Fan club</li>
+            <li>Gallery</li>
+            <li>Contact us</li>
+            <li>Join now</li>
+        </ul>
+    </section>
+   
+   </header>
 
-        <div class="circles">
-            <span  data-index="0" class="material-symbols-outlined circle active"> fiber_manual_record </span>
-            <span data-index="1"class="material-symbols-outlined circle"> fiber_manual_record </span>
-            <span data-index="2" class="material-symbols-outlined circle"> fiber_manual_record </span>
-            <span data-index="3" class="material-symbols-outlined circle"> fiber_manual_record </span>
-            <span data-index="4"class="material-symbols-outlined circle"> fiber_manual_record </span>
+   <main id="main" class="main">
+    <section class="mainImages">
+        <figure id="puImages">
+            
+        </figure>
+        <div id="circles" class="circles">
+            
         </div>
     </section>
+
+    <section id="worldTiur">
+        <h2>follow us around the world - amazing tour</h2>
+        <div class="tour">
+            <figure>
+                <div class="tourImg" ></div>
+                <figcaption>
+                    <h5>Aalborg, arena nord</h5>
+                    <p>Manday 21:00 - 24:00</p>
+                    <p>ticket: 100$</p>
+                </figcaption>
+            </figure>
+
+        </div>
+        <div></div>
+        <div></div>
+
+    </section>
+
     <section class="staff">
         <h2> Get aquanted with band</h2>
         <div class="staffList" >
@@ -126,17 +166,22 @@
         </div>
         <div class="newslatter">
             <h4>Newsletter</h4>
-            <form action="">
-                <input type="email" name="" id="" placeholder="Your email"><br>
+            <form id="emailForm">
+                <span id="emailError" class="error">Please enter a valid email address.</span>
+                <input type="email" name="" id="email" placeholder="Your email"><br>
                 <input type="checkbox" id="checkbox1" name="checkbox1">
-                <label class="lable" for="checkbox1">I agree with the terms and conditions</label>
-               
+                <label class="lable" for="checkbox1">I agree with the terms and conditions</label><br>
+                <input onclick="submitForm()" type="button" value="Submite"><br>
             </form>
+            <div id="thankYou">
+                <h3>Thank you for registering in our newsletter </h3>
+            </div>
         </div>
    </footer>
    <section class="right">
     <p>@2024 Omid, All right reserved </p>
 </section>
-    <script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
+
 </body>
 </html>

@@ -16,3 +16,112 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+
+
+  const menuOne = document.getElementById('ico');
+  const menuTwo = document.getElementById('mobileOpened');
+  const mainSection = document.getElementById('main');
+  const changeIcone = document.getElementById('icoTwo');
+  function openBar() {
+
+    menuOne.style.display = 'none';
+    menuTwo.style.display = 'flex';
+    changeIcone.style.display = 'block';
+    mainSection.style.opacity = '0.3';
+  }
+
+  function closeBar() {
+    changeIcone.style.display = 'none';
+    menuOne.style.display = 'flex';
+    menuTwo.style.display = 'none';
+    mainSection.style.opacity = '1';
+  }
+
+
+  // Email validation
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  function submitForm() {
+   const myForm = document.getElementById('emailForm');
+    const emailInput = document.getElementById('email').value;
+    const emailError = document.getElementById('emailError');
+    const Thanks = document.getElementById('thankYou');
+    console.log(emailInput);
+    if (!validateEmail(emailInput)) {
+      emailError.style.display = 'block';
+    } else {
+      emailError.style.display = 'none';
+      myForm.style.display = 'none';
+      Thanks.style.display='block';
+    }
+  }
+
+
+
+  const imageContainer = document.getElementById('puImages');
+
+  let arrayImages = [
+    `<div id="im1" class="carousel-image img1 active" ></div>`,
+    `<div id="im2" class="carousel-image img2 active" ></div>`,
+    `<div id="im3" class="carousel-image img3 active"></div>`,
+    `<div id="im4" class="carousel-image img4 active"></div>`,
+    `<div id="im5" class="carousel-image img5 active"></div>`,
+  ];
+  let indexNumber = 0;
+  imageContainer.innerHTML = arrayImages[0];
+  setInterval(() => {
+    if (indexNumber >= arrayImages.length - 1) {
+      indexNumber = 0;
+      
+    } else {
+      indexNumber = indexNumber + 1;
+    }
+    imageContainer.innerHTML = arrayImages[indexNumber];
+  },4000);
+
+
+
+
+  const Burchange = document.getElementById('circles');
+
+  let myArray = [
+    `<span  data-index="0" class="material-symbols-outlined circle active"> fiber_manual_record </span>
+    <span data-index="1"class="material-symbols-outlined circle" > fiber_manual_record </span>
+    <span data-index="2" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="3" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="4"class="material-symbols-outlined circle"> fiber_manual_record </span>`,
+    `<span  data-index="0" class="material-symbols-outlined circle "> fiber_manual_record </span>
+    <span data-index="1"class="material-symbols-outlined circle active" > fiber_manual_record </span>
+    <span data-index="2" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="3" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="4"class="material-symbols-outlined circle"> fiber_manual_record </span>`,
+    `<span  data-index="0" class="material-symbols-outlined circle "> fiber_manual_record </span>
+    <span data-index="1"class="material-symbols-outlined circle " > fiber_manual_record </span>
+    <span data-index="2" class="material-symbols-outlined circle active"> fiber_manual_record </span>
+    <span data-index="3" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="4"class="material-symbols-outlined circle"> fiber_manual_record </span>`,
+    `<span  data-index="0" class="material-symbols-outlined circle "> fiber_manual_record </span>
+    <span data-index="1"class="material-symbols-outlined circle" > fiber_manual_record </span>
+    <span data-index="2" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="3" class="material-symbols-outlined circle active"> fiber_manual_record </span>
+    <span data-index="4"class="material-symbols-outlined circle"> fiber_manual_record </span>`,
+    `<span  data-index="0" class="material-symbols-outlined circle "> fiber_manual_record </span>
+    <span data-index="1"class="material-symbols-outlined circle" > fiber_manual_record </span>
+    <span data-index="2" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="3" class="material-symbols-outlined circle"> fiber_manual_record </span>
+    <span data-index="4"class="material-symbols-outlined circle active"> fiber_manual_record </span>`,
+  ];
+  let buttArray = 0;
+  Burchange.innerHTML = myArray[0];
+  setInterval(() => {
+    if (buttArray >= myArray.length - 1) {
+      buttArray = 0;
+      
+    } else {
+      buttArray = buttArray + 1;
+    }
+    Burchange.innerHTML = myArray[buttArray];
+  },4000);

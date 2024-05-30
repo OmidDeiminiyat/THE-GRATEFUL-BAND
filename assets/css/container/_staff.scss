@@ -1,0 +1,64 @@
+
+
+.staff {
+    background-color: $card;
+    
+
+    h2 {
+        color: $titles;
+        text-align: center;
+    }
+    .staffList {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+
+        figure{
+            border: 1px solid $border;
+            border-radius: 30px;
+            text-align: center;
+            background-color: $card;
+            p{
+                color: $paragraf;
+            }
+
+
+            button{
+                padding: 6px 6px 8px 6px;
+                margin: 0 0 6px 0;
+            }
+        }
+        
+        .img, .img1, .img2, .img3 {
+            width: 100%;
+            height: 200px;
+            border: 1px solid $border;
+            border-radius: 0 60px 0 60px;
+            transition: $transition-duration;
+        }
+        .img{
+            background-image: url('../images/Second.png');
+            background-size: cover;
+        }
+        .img1{
+            background-image: url('../images/First.png');
+            background-size: cover;
+        }
+        .img2{
+            background-image: url('../images/pexels-wendy-wei-1699161.jpg');
+            background-size: cover;
+        }
+        .img3{
+            background-image: url('../images/Second.png');
+            background-size: cover;
+        }
+        .img:hover {
+            box-shadow: 0px 2px 26px 0px rgba(169,134,42,0.75);
+
+        }
+    }
+   
+}
+
+
+

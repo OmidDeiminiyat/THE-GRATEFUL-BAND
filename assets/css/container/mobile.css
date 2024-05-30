@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+  .main-head {
+    display: none;
+  }
+  .mobileClosed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .mobileClosed img {
+    width: 200px;
+  }
+  .mobileOpened {
+    display: none;
+  }
+}

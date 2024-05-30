@@ -1,0 +1,33 @@
+#worldTiur {
+    width: 70%;
+    margin-left: 15%;
+   
+   h2{
+    color: $titles;
+   }
+}
+.tour {
+    display: grid;
+    grid: 1fr;
+    h5 {
+        color: $paragraf;
+        font-size: 21px;
+        margin: 10px 0 0 0;
+    }
+    
+    figure{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $dark;
+        
+    }
+    .tourImg{
+        background-image: url('../images/pexels-vishnu-r-nair-1105666.jpg');
+        background-size: cover;
+        border-radius: 0 40% 40% 0;
+        width: 30%;
+    }
+
+
+
+}

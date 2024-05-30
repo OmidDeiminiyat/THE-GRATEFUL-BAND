@@ -1,0 +1,55 @@
+@import "../helper/variable";
+
+
+
+.main-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   figure{
+    margin: 0 0 0 30px;
+
+   }
+    img {
+        width: 5vw;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        background-color: $headerBox;
+        padding: 0;
+        border-radius: 30px;
+
+        li {
+            padding: 10px 15px 1px 15px;
+            color: $paragraf;
+            }
+
+     li:nth-child(1) {
+        color: rgb(249, 245, 245);
+        background-color: $clicked;
+        border-radius: 15px;
+        padding: 10px 15px 1px 15px;
+     }
+    }
+
+    .thirdHead {
+        margin: 20px 30px 0 0;
+      
+        .button {
+            padding: 9px 21px 9px 21px;
+            border-radius: 30px;
+            border: none;
+            background-color: $button;
+            cursor: pointer;
+           
+        }
+    }
+}
+
+#mobileClosed, #mobileOpened, #icoTwo {
+    display: none;
+}
+
