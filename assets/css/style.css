@@ -83,6 +83,7 @@
 .main-head ul {
   display: flex;
   flex-direction: row;
+  justify-content: 0;
   list-style: none;
   background-color: rgba(67, 49, 31, 0.7843137255);
   padding: 0;
@@ -122,7 +123,7 @@
 .staff {
   background-color: #483726;
 }
-.staff h2 {
+.staff h2, .staff .tour h4, .tour .staff h4 {
   color: rgba(210, 166, 127, 0.6901960784);
   text-align: center;
 }
@@ -253,7 +254,7 @@ footer .newslatter #thankYou {
   width: 60%;
   margin-left: 20%;
 }
-#worldTiur h2 {
+#worldTiur h2, #worldTiur .tour h4, .tour #worldTiur h4 {
   color: rgba(210, 166, 127, 0.6901960784);
   text-align: center;
 }
@@ -299,6 +300,50 @@ footer .newslatter #thankYou {
 }
 .tour button:hover {
   background: #fdb375;
+}
+.tour .butTwo {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+.tour .butTwo figcaption {
+  padding: 0;
+}
+.tour .butTwo #myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.tour .butTwo form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1px;
+}
+.tour .butTwo form input {
+  width: 90%;
+  height: 21px;
+}
+.tour .butTwo form button {
+  background: #FECFA7;
+  color: #23201D;
+  padding: 9px 21px 9px 21px;
+  border: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 40%;
+  height: 40px;
+  margin: 0 0 0 24%;
+}
+.tour .butTwo form button:hover {
+  background: #fdb375;
+}
+.tour h4 {
+  margin: 9px 0 9px 0;
 }
 
 .logo-container {

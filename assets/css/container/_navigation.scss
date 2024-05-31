@@ -5,6 +5,7 @@
 
 .main-head {
     @include flexible(flex, row, space-between);
+
    figure{
     margin: 0 0 0 30px;
 
@@ -14,7 +15,7 @@
     }
 
     ul {
-        @include flexible(flex, row);
+        @include flexible(flex, row, 0);
         list-style: none;
         background-color: $headerBox;
         padding: 0;

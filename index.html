@@ -21,7 +21,7 @@
         <li>Fan club</li>
         <li onclick="gallery()" >Gallery</li>
         <li>Contact us</li>
-        <li>Join now</li>
+        <li>Buy ticket</li>
     </ul>
     <div class="thirdHead">
         <button class="button">Join fan club</button>
@@ -82,32 +82,80 @@
     <section id="worldTiur">
         <h2>follow us around the world - amazing tour</h2>
         <div class="tour">
-            <figure>
+            <figure id="buyOne">
                 <div class="tourImg" ></div>
                 <figcaption>
                     <h5>USA Tour</h5>
                     <p>NewYork, Arena north</p>
                     <p>Manday 21:00 - 24:00</p>
                 </figcaption>
-                <button>Buy ticket</button>
+                <button onclick="buyTicket('no1')">Buy ticket</button>
             </figure>
-            <figure>
+            <figure class="butTwo" id="buyTwo">
+               
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/videos/Concert.mp4" type="video/mp4">
+                  </video>
+                <figcaption>
+                    <h4>insert your information</h4>
+                    <form>
+                        <input type="text" id="name" placeholder="Insert your name">
+                        <input type="email" id="name" placeholder="Insert your email">
+                        <button type="submit" id="submit">Buy ticket</button>
+                    </form>
+                    
+                </figcaption>
+               
+            </figure>
+            <figure id="buyThree">
                 <div class="tourImg" ></div>
                 <figcaption>
                     <h5>Denmark Tour</h5>
                     <p>Aalborg, Arena nord</p>
                     <p>Friday 21:00 - 24:00</p>
                 </figcaption>
-                <button>Buy ticket</button>
+                <button onclick="buyTicket('no2')">Buy ticket</button>
             </figure>
-            <figure>
+            <figure class="butTwo" id="buyFour">
+               
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/videos/sexy-woman-dance-music-concert-dancer-girl-enjoy-n-2023-11-27-05-31-54-utc.mp4" type="video/mp4">
+                  </video>
+                <figcaption>
+                    <h4>insert your information</h4>
+                    <form>
+                        <input type="text" id="name" placeholder="Insert your name">
+                        <input type="email" id="name" placeholder="Insert your email">
+                        <button type="submit" id="submit">Buy ticket</button>
+                    </form>
+                    
+                </figcaption>
+               
+            </figure>
+            <figure id="buyFive">
                 <div class="tourImg" ></div>
                 <figcaption>
                     <h5>Spain Tour</h5>
                     <p>Barcelona, Arena south</p>
                     <p>Manday 21:00 - 24:00</p>
                 </figcaption>
-                <button>Buy ticket</button>
+                <button onclick="buyTicket('no3')">Buy ticket</button>
+            </figure>
+            <figure class="butTwo" id="buySix">
+               
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/videos/Concert.mp4" type="video/mp4">
+                  </video>
+                <figcaption>
+                    <h4>insert your information</h4>
+                    <form>
+                        <input type="text" id="name" placeholder="Insert your name">
+                        <input type="email" id="name" placeholder="Insert your email">
+                        <button type="submit" id="submit">Buy ticket</button>
+                    </form>
+                    
+                </figcaption>
+               
             </figure>
 
         </div>
@@ -116,6 +164,7 @@
 
     </section>
 
+    <!-- Buy ticket  -->    
     <section id="staff" class="staff">
         <h2> Get aquanted with band</h2>
         <div class="staffList" >

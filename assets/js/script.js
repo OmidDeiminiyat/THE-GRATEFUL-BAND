@@ -150,3 +150,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
+function buyTicket(data) {
+  const sectionOne = document.getElementById('buyOne');
+  const sectionTwo = document.getElementById('buyTwo');
+  const sectionThree = document.getElementById('buyThree');
+  const sectionFour = document.getElementById('buyFour');
+  const sectionFive = document.getElementById('buyFive');
+  const sectionSix = document.getElementById('buySix');
+ if (data == 'no1') {
+  sectionOne.style.display = 'none';
+  sectionTwo.style.display = 'grid';
+ } else if (data == 'no2') {
+  sectionThree.style.display = 'none';
+  sectionFour.style.display = 'grid';
+ } else if(data == 'no3') {
+  sectionFive.style.display = 'none';
+  sectionSix.style.display = 'grid';
+ }
+  
+}
