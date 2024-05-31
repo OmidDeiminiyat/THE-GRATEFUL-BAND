@@ -1,33 +1,42 @@
 #worldTiur {
-    width: 70%;
-    margin-left: 15%;
+    width: 60%;
+    margin-left: 20%;
    
    h2{
     color: $titles;
+    text-align: center;
    }
 }
 .tour {
-    display: grid;
-    grid: 1fr;
+    @include desplayStyle(grid, 1fr, 0);
     h5 {
         color: $paragraf;
         font-size: 21px;
         margin: 10px 0 0 0;
+       
+    }
+    p {
+        color: $paragraf;
     }
     
     figure{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include desplayStyle(grid, 1fr 1fr 1fr, 0);
         background-color: $dark;
-        
+        border-radius: 12px;
     }
+
     .tourImg{
-        background-image: url('../images/pexels-vishnu-r-nair-1105666.jpg');
-        background-size: cover;
-        border-radius: 0 40% 40% 0;
-        width: 30%;
+        @include background-image('../images/pexels-vishnu-r-nair-1105666');
+        border-radius: 0 20% 20% 0;
+        width: 60%;
+        height: 100%
     }
 
-
+    button{
+        @include button-styles($button, $dark);
+        width: 60%;
+        height: 40px;
+        margin: 15% 0 0 10%;
+    }
 
 }

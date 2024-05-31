@@ -1,17 +1,15 @@
-
+@import "../helper/mixin";
+@import "../helper/mixin";
 
 .staff {
     background-color: $card;
     
-
     h2 {
         color: $titles;
         text-align: center;
     }
     .staffList {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 1rem;
+        @include desplayStyle(grid, 1fr 1fr 1fr 1fr, 1rem);
 
         figure{
             border: 1px solid $border;
@@ -24,8 +22,8 @@
 
 
             button{
-                padding: 6px 6px 8px 6px;
-                margin: 0 0 6px 0;
+                @include button-styles($button, $dark);
+                
             }
         }
         
@@ -37,20 +35,18 @@
             transition: $transition-duration;
         }
         .img{
-            background-image: url('../images/Second.png');
-            background-size: cover;
+            @include background-png('../images/Second');
+           
         }
         .img1{
-            background-image: url('../images/First.png');
-            background-size: cover;
+            @include background-png('../images/First');
+       
         }
         .img2{
-            background-image: url('../images/pexels-wendy-wei-1699161.jpg');
-            background-size: cover;
+            @include background-image('../images/pexels-wendy-wei-1699161');
         }
         .img3{
-            background-image: url('../images/Second.png');
-            background-size: cover;
+            @include background-png('../images/Second');
         }
         .img:hover {
             box-shadow: 0px 2px 26px 0px rgba(169,134,42,0.75);

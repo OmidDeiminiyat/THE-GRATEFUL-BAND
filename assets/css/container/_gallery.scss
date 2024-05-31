@@ -1,0 +1,15 @@
+@import "../helper/mixin";
+
+#hiddenGalery {
+    width: 90%;
+    margin-left: 5%;
+    display: none;
+    figure{
+        @include desplayStyle(grid, 1fr 1fr, 1rem);
+    }
+
+   img{
+    width: 100%;
+   }
+   
+}

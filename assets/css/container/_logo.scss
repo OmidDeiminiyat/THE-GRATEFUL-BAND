@@ -1,0 +1,37 @@
+@import "../helper/mixin";
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 300px;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #994717be;
+    animation: logo-animation 4s infinite;
+    text-shadow: 0 0 10px rgba(255, 201, 64, 0.8), 0 0 20px rgba(255, 220, 64, 0.6), 0 0 30px rgba(255, 64, 129, 0.4);
+}
+
+@keyframes logo-animation {
+    0%, 100% {
+        color: #ffa640;
+        transform: rotate(0deg);
+    }
+    25% {
+        color: #ff79b0;
+        transform: rotate(10deg);
+    }
+    50% {
+        color: #ff4081;
+        transform: rotate(0deg);
+    }
+    75% {
+        color: #ff79b0;
+        transform: rotate(-10deg);
+    }
+}
+
+

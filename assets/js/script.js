@@ -125,3 +125,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     Burchange.innerHTML = myArray[buttArray];
   },4000);
+
+
+  function gallery() {
+    const first = document.getElementById('hiddenGalery');
+    const second = document.getElementById('mainImages');
+    const third = document.getElementById('worldTiur');
+    const forth = document.getElementById('staff');
+    first.style.display = 'grid';
+    second.style.display = 'none';
+    third.style.display = 'none';
+    forth.style.display = 'none';
+  }
+
+  function home() {
+    const first = document.getElementById('hiddenGalery');
+    const second = document.getElementById('mainImages');
+    const third = document.getElementById('worldTiur');
+    const forth = document.getElementById('staff');
+    first.style.display = 'none';
+    second.style.display = 'grid';
+    third.style.display = 'grid';
+    forth.style.display = 'grid';
+  }
+
+

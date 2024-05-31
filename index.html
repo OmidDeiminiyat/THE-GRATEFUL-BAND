@@ -12,12 +12,14 @@
 
  <figure>
        
-        <img src="./assets/images/THE-GRATEFUL-BAND.png" alt="">
+    <div class="logo-container">
+        <h1 class="logo">GRATEFUL BAND</h1>
+    </div>
     </figure> 
     <ul>
-        <li>Home</li>
+        <li onclick="home()">Home</li>
         <li>Fan club</li>
-        <li>Gallery</li>
+        <li onclick="gallery()" >Gallery</li>
         <li>Contact us</li>
         <li>Join now</li>
     </ul>
@@ -29,7 +31,9 @@
    <header id="mobileClosed" class="mobileClosed">
     <div></div>
     <figure>
-        <img src="./assets/images/THE-GRATEFUL-BAND.png" alt="">
+        <div class="logo-container">
+            <h1 class="logo">GRATEFUL BAND</h1>
+        </div>
     </figure>
     <span id="ico" onclick="openBar()" class="material-symbols-outlined">
         menu
@@ -42,9 +46,9 @@
    <header id="mobileOpened" class="mobileOpened">
     <section>
         <ul class="mobileMenuIn">
-            <li>Home</li>
+            <li onclick="home()">Home</li>
             <li>Fan club</li>
-            <li>Gallery</li>
+            <li onclick="gallery()" >Gallery</li>
             <li>Contact us</li>
             <li>Join now</li>
         </ul>
@@ -53,7 +57,7 @@
    </header>
 
    <main id="main" class="main">
-    <section class="mainImages">
+    <section id="mainImages" class="mainImages">
         <figure id="puImages">
             
         </figure>
@@ -62,16 +66,48 @@
         </div>
     </section>
 
+    <!-- Hidden gallery start -->
+    <section id="hiddenGalery">
+        <figure>
+            <img src="assets/images/pexels-brett-sayles-1309240.jpg" alt="">
+            <img src="assets/images/pexels-jc-siller-8634867.jpg" alt="">
+            <img src="assets/images/pexels-josh-sorenson-995301.jpg" alt="">
+            <img src="assets/images/pexels-oleg-magni-1813124.jpg" alt="">
+            <img src="assets/images/pexels-vishnu-r-nair-1105666.jpg" alt="">
+            <img src="assets/images/pexels-wendy-wei-1699161.jpg" alt="">
+        </figure>
+
+    </section>
+
     <section id="worldTiur">
         <h2>follow us around the world - amazing tour</h2>
         <div class="tour">
             <figure>
                 <div class="tourImg" ></div>
                 <figcaption>
-                    <h5>Aalborg, arena nord</h5>
+                    <h5>USA Tour</h5>
+                    <p>NewYork, Arena north</p>
                     <p>Manday 21:00 - 24:00</p>
-                    <p>ticket: 100$</p>
                 </figcaption>
+                <button>Buy ticket</button>
+            </figure>
+            <figure>
+                <div class="tourImg" ></div>
+                <figcaption>
+                    <h5>Denmark Tour</h5>
+                    <p>Aalborg, Arena nord</p>
+                    <p>Friday 21:00 - 24:00</p>
+                </figcaption>
+                <button>Buy ticket</button>
+            </figure>
+            <figure>
+                <div class="tourImg" ></div>
+                <figcaption>
+                    <h5>Spain Tour</h5>
+                    <p>Barcelona, Arena south</p>
+                    <p>Manday 21:00 - 24:00</p>
+                </figcaption>
+                <button>Buy ticket</button>
             </figure>
 
         </div>
@@ -80,7 +116,7 @@
 
     </section>
 
-    <section class="staff">
+    <section id="staff" class="staff">
         <h2> Get aquanted with band</h2>
         <div class="staffList" >
             <figure>
@@ -125,7 +161,7 @@
             <figure>
                 <div class="img3" ></div>
                 <figcaption>
-                    <h2>Omid</h2>
+                    <h2>Mette</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                          Dolore saepe inventore natus aliquid nihil exercitationem 
                          facilis amet nemo maxime sit vitae expedita voluptatum
@@ -142,7 +178,10 @@
    <footer>
         <div>
             <figure>
-                <img src="assets/images/THE-GRATEFUL-BAND.png" alt="">
+              
+               <div class="logo-container">
+                    <h1 class="logo">GRATEFUL BAND</h1>
+                </div> 
                 <figcaption>
                     <p>Our mission is to connect with audiences on a profound level</p>
                 </figcaption>
@@ -171,7 +210,7 @@
                 <input type="email" name="" id="email" placeholder="Your email"><br>
                 <input type="checkbox" id="checkbox1" name="checkbox1">
                 <label class="lable" for="checkbox1">I agree with the terms and conditions</label><br>
-                <input onclick="submitForm()" type="button" value="Submite"><br>
+                <input id="But" onclick="submitForm()" type="button" value="Submite"><br>
             </form>
             <div id="thankYou">
                 <h3>Thank you for registering in our newsletter </h3>
@@ -185,3 +224,4 @@
 
 </body>
 </html>
+
